@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog API Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐕 Dog API Viewer</h1>
+            <p>Discover amazing dog breeds and their photos!</p>
+        </header>
+
+        <div class="controls">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="breedSearch" 
+                    placeholder="Search for a breed (e.g., golden, bulldog, husky)"
+                    autocomplete="off"
+                >
+                <button id="searchBtn">Search Breed</button>
+            </div>
+            <button id="refreshBtn">🔄 Load Random Dogs</button>
+        </div>
+
+        <div class="stats">
+            <span id="imageCount">Loading...</span>
+        </div>
+
+        <div id="loadingSpinner" class="loading">
+            <div class="spinner"></div>
+            <p>Fetching adorable dogs...</p>
+        </div>
+
+        <div id="errorMessage" class="error hidden">
+            <p>Oops! Something went wrong. Please try again.</p>
+        </div>
+
+        <div id="dogGrid" class="dog-grid">
+            <!-- Dog images will be populated here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
